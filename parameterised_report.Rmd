@@ -1,0 +1,14 @@
+---
+output: html_document
+params:
+  year: NA
+title: "Document for Year: `r params$year`"
+---
+
+# Chapter: `r params$year`
+
+This is a very simple document that jsut uses one parameter.
+The year is `r params$year`.
+
+```{r child = if(params$year == 2011){"child_document.Rmd"} }
+```

@@ -1,0 +1,20 @@
+--- 
+title: "Book Example"
+author: "Zachary Waller"
+output: bookdown::gitbook
+documentclass: book
+description: "This is a minimal example of turning a parameterised rmarkdown report into a book."
+---
+
+# Intro
+
+This book uses a parameterised report and an `index.Rmd` to make a book.
+The idea is to render the parameterised report into `.md` files, which will fill 
+the parameters in and generate images, but keep the files in plan text format.
+
+These reports then get pasted together (with the `index` file at the start) and 
+rendered into one book. This approach is a little hacky (I largely just took 
+snippets of code from the bookdown source) and doesn't do much fancy stuff (it 
+doesn't quite put files in the right place), but hopefully it'll be helpful to 
+someone!
+

@@ -1,0 +1,34 @@
+---
+title: "Child document to 2011"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Child Document
+
+This is unrelated to turning parameterised reports into books, but is a helpful 
+feature anyway that I thought would be helpful to put in.
+
+This is a child document that will only appear when certain parameters are passed 
+to the parameterised document. Using child documents allows you to add extra content 
+to parameterised documents so you can customise them a bit!
+
+Here's some random code from the default rmarkdown file to show that code and 
+figures still work when making a book of parameterised reports.
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
