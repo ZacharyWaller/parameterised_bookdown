@@ -2,17 +2,17 @@
 rmarkdown_file <- "parameterised_report.Rmd"
 
 # the parameter we're going to pass to the report
-years <- c(2010:2020)
+report_cyl <- c(4, 6, 8)
 
 # Run Parameterised Reports ----------------------------------------------------
-# run through the years and render each version of the report.
+# run through the cyls and render each version of the report.
 # the important part here is "run_pandoc = FALSE" which will leave us with
 # a .md file for each report.
 markdowns <- lapply(
-  years,
+  report_cyl,
   function(x, filename){
 
-    rmarkdown::render(filename, params = list(year = x), run_pandoc = FALSE)
+    rmarkdown::render(filename, params = list(cyl_num = x), run_pandoc = FALSE)
 
     base_filename <- xfun::sans_ext(filename)
     # filename.knit.md will be created by the render
