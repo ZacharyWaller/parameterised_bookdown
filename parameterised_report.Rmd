@@ -1,14 +1,18 @@
 ---
 output: html_document
 params:
-  year: NA
-title: "Document for Year: `r params$year`"
+  cyl_num: 4
+title: "Example"
 ---
 
-# Chapter: `r params$year`
+# Chapter: `r params$cyl_num` cyl
 
-This is a very simple document that jsut uses one parameter.
-The year is `r params$year`.
+Does the plot below show `r params$cyl_num` cyl?
 
-```{r child = if(params$year == 2011){"child_document.Rmd"} }
+```{r}
+library(tidyverse)
+mtcars %>%
+filter(cyl == params$cyl_num) %>%
+ggplot(aes(x = cyl, mpg)) +
+geom_point()
 ```
